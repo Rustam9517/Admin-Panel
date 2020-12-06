@@ -50,6 +50,7 @@ const AddUser = (props) =>{
                     <input
                         type="email"
                         onChange={(event => setEmail(event.target.value))}
+                        placeholder={"example@mail.com"}
                     />
                 </label>
                 {errorMsg.passVal?<p>{errorMsg.passErr}</p>:null}
@@ -65,7 +66,7 @@ const AddUser = (props) =>{
                     <span>Mobile number</span>
                     <input type="tel"
 
-                           placeholder="+994-77-717-03-95"
+                           placeholder="+994777170395"
                            onChange={(event => setMobile(event.target.value))}
                            required
                     />

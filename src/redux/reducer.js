@@ -45,6 +45,12 @@ export const reducer = (state =inState ,actions) =>{
             if(actions.payload.clientBox && actions.payload.partnerBox && actions.payload.adminBox && actions.payload.searchValue===el.mobile) {
                 return el.mobile===actions.payload.searchValue; //all 3 checkboxes and mobile
             }else
+            if(!actions.payload.clientBox && !actions.payload.partnerBox && !actions.payload.adminBox && actions.payload.searchValue===el.email) {
+                return el.email===actions.payload.searchValue; //only email
+            }else
+            if(!actions.payload.clientBox && !actions.payload.partnerBox && !actions.payload.adminBox && actions.payload.searchValue===el.mobile) {
+                return el.mobile===actions.payload.searchValue; //only mobile
+            }else
             if(actions.payload.clientBox && !actions.payload.partnerBox && !actions.payload.adminBox && !actions.payload.searchValue) {
                 return el.status=== actions.payload.clientBox; //client without search text
             }else
